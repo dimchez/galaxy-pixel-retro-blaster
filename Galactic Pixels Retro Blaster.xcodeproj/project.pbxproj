@@ -48,7 +48,6 @@
 		0D281A7D2B11521C0075AE41 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A7C2B11521C0075AE41 /* backgroundMusic.mp3 */; };
 		0D281A7F2B1383770075AE41 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A7E2B1383770075AE41 /* SoundEffects.swift */; };
 		0D281A812B13BF650075AE41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A802B13BF650075AE41 /* Settings.swift */; };
-		0D281A832B13C9CC0075AE41 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A822B13C9CB0075AE41 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +94,6 @@
 		0D281A7C2B11521C0075AE41 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		0D281A7E2B1383770075AE41 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
 		0D281A802B13BF650075AE41 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		0D281A822B13C9CB0075AE41 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,6 @@
 		0D281A0A2B02CA1E0075AE41 /* Galactic Pixels Retro Blaster */ = {
 			isa = PBXGroup;
 			children = (
-				0D281A822B13C9CB0075AE41 /* LICENSE.txt */,
 				0D281A302B03F6CC0075AE41 /* Galactic-Pixels-Retro-Blaster-Info.plist */,
 				0D281A0B2B02CA1E0075AE41 /* AppDelegate.swift */,
 				0D281A802B13BF650075AE41 /* Settings.swift */,
@@ -343,7 +340,6 @@
 				0D281A2E2B03F5EC0075AE41 /* 04B_03__.TTF in Resources */,
 				0D281A4E2B0801D30075AE41 /* Explosion.atlas in Resources */,
 				0D281A522B0932E30075AE41 /* Bullet.atlas in Resources */,
-				0D281A832B13C9CC0075AE41 /* LICENSE.txt in Resources */,
 				0D281A7B2B1151D70075AE41 /* explosion.wav in Resources */,
 				0D281A452B07B89C0075AE41 /* Enemy.atlas in Resources */,
 				0D281A192B02CA1F0075AE41 /* Assets.xcassets in Resources */,
