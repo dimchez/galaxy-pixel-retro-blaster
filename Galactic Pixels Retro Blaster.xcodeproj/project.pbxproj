@@ -9,24 +9,93 @@
 /* Begin PBXBuildFile section */
 		0D281A0C2B02CA1E0075AE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A0B2B02CA1E0075AE41 /* AppDelegate.swift */; };
 		0D281A0E2B02CA1E0075AE41 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A0D2B02CA1E0075AE41 /* GameScene.sks */; };
-		0D281A102B02CA1E0075AE41 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A0F2B02CA1E0075AE41 /* Actions.sks */; };
 		0D281A122B02CA1E0075AE41 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A112B02CA1E0075AE41 /* GameScene.swift */; };
 		0D281A142B02CA1E0075AE41 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A132B02CA1E0075AE41 /* GameViewController.swift */; };
 		0D281A172B02CA1E0075AE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A152B02CA1E0075AE41 /* Main.storyboard */; };
 		0D281A192B02CA1F0075AE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A182B02CA1F0075AE41 /* Assets.xcassets */; };
 		0D281A1C2B02CA1F0075AE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A1A2B02CA1F0075AE41 /* LaunchScreen.storyboard */; };
+		0D281A272B02CABA0075AE41 /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A262B02CABA0075AE41 /* TitleScene.sks */; };
+		0D281A2C2B02CB400075AE41 /* TitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A2B2B02CB400075AE41 /* TitleScene.swift */; };
+		0D281A2E2B03F5EC0075AE41 /* 04B_03__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A2D2B03F5EC0075AE41 /* 04B_03__.TTF */; };
+		0D281A332B03FB070075AE41 /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A322B03FB070075AE41 /* PlayingState.swift */; };
+		0D281A352B0407630075AE41 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A342B0407630075AE41 /* GameOverState.swift */; };
+		0D281A372B0407A90075AE41 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A362B0407A90075AE41 /* PausedState.swift */; };
+		0D281A392B041D950075AE41 /* InfiniteScrollingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A382B041D940075AE41 /* InfiniteScrollingBackground.swift */; };
+		0D281A3B2B056C100075AE41 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A3A2B056C100075AE41 /* Player.swift */; };
+		0D281A3D2B05725D0075AE41 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A3C2B05725D0075AE41 /* Utils.swift */; };
+		0D281A3F2B06AC5F0075AE41 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A3E2B06AC5F0075AE41 /* Enemy.swift */; };
+		0D281A412B06B0C40075AE41 /* EnemyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A402B06B0C40075AE41 /* EnemyFactory.swift */; };
+		0D281A452B07B89C0075AE41 /* Enemy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A442B07B89C0075AE41 /* Enemy.atlas */; };
+		0D281A472B07F2D50075AE41 /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A462B07F2D50075AE41 /* PhysicsCategories.swift */; };
+		0D281A4C2B07FE530075AE41 /* ExplosionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A4B2B07FE530075AE41 /* ExplosionFactory.swift */; };
+		0D281A4E2B0801D30075AE41 /* Explosion.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A4D2B0801D30075AE41 /* Explosion.atlas */; };
+		0D281A502B092AFD0075AE41 /* Bullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A4F2B092AFD0075AE41 /* Bullet.swift */; };
+		0D281A522B0932E30075AE41 /* Bullet.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A512B0932E20075AE41 /* Bullet.atlas */; };
+		0D281A542B0932FB0075AE41 /* BulletFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A532B0932FB0075AE41 /* BulletFactory.swift */; };
+		0D281A562B0A4DD50075AE41 /* MuzzleFlash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A552B0A4DD50075AE41 /* MuzzleFlash.swift */; };
+		0D281A582B0A51510075AE41 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A572B0A51510075AE41 /* Updatable.swift */; };
+		0D281A5D2B0A6A340075AE41 /* BulletHitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A5C2B0A6A340075AE41 /* BulletHitFactory.swift */; };
+		0D281A5F2B0A6D3F0075AE41 /* Hit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A5E2B0A6D3F0075AE41 /* Hit.atlas */; };
+		0D281A652B0A87810075AE41 /* ContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A642B0A87810075AE41 /* ContactDelegate.swift */; };
+		0D281A6A2B0BE5FF0075AE41 /* EnemyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */; };
+		0D281A6C2B0D357E0075AE41 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A6B2B0D357E0075AE41 /* Asteroid.swift */; };
+		0D281A6E2B0D38A20075AE41 /* AsteroidFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A6D2B0D38A20075AE41 /* AsteroidFactory.swift */; };
+		0D281A722B0E03760075AE41 /* Damageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A712B0E03760075AE41 /* Damageable.swift */; };
+		0D281A742B0E042A0075AE41 /* AsteroidDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */; };
+		0D281A762B0E7E030075AE41 /* AsteroidSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A752B0E7E030075AE41 /* AsteroidSmall.swift */; };
+		0D281A782B1151C20075AE41 /* bulletHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A772B1151C20075AE41 /* bulletHit.wav */; };
+		0D281A7B2B1151D70075AE41 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A7A2B1151D70075AE41 /* explosion.wav */; };
+		0D281A7D2B11521C0075AE41 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A7C2B11521C0075AE41 /* backgroundMusic.mp3 */; };
+		0D281A7F2B1383770075AE41 /* SoundEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A7E2B1383770075AE41 /* SoundEffects.swift */; };
+		0D281A812B13BF650075AE41 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A802B13BF650075AE41 /* Settings.swift */; };
+		0D281A832B13C9CC0075AE41 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A822B13C9CB0075AE41 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D281A082B02CA1E0075AE41 /* Galactic Pixels Retro Blaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Galactic Pixels Retro Blaster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D281A0B2B02CA1E0075AE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D281A0D2B02CA1E0075AE41 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		0D281A0F2B02CA1E0075AE41 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		0D281A112B02CA1E0075AE41 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		0D281A132B02CA1E0075AE41 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0D281A162B02CA1E0075AE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D281A182B02CA1F0075AE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D281A1B2B02CA1F0075AE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0D281A262B02CABA0075AE41 /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TitleScene.sks; sourceTree = "<group>"; };
+		0D281A2B2B02CB400075AE41 /* TitleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScene.swift; sourceTree = "<group>"; };
+		0D281A2D2B03F5EC0075AE41 /* 04B_03__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_03__.TTF; sourceTree = "<group>"; };
+		0D281A302B03F6CC0075AE41 /* Galactic-Pixels-Retro-Blaster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Galactic-Pixels-Retro-Blaster-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0D281A322B03FB070075AE41 /* PlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingState.swift; sourceTree = "<group>"; };
+		0D281A342B0407630075AE41 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
+		0D281A362B0407A90075AE41 /* PausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedState.swift; sourceTree = "<group>"; };
+		0D281A382B041D940075AE41 /* InfiniteScrollingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollingBackground.swift; sourceTree = "<group>"; };
+		0D281A3A2B056C100075AE41 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0D281A3C2B05725D0075AE41 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0D281A3E2B06AC5F0075AE41 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		0D281A402B06B0C40075AE41 /* EnemyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyFactory.swift; sourceTree = "<group>"; };
+		0D281A442B07B89C0075AE41 /* Enemy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Enemy.atlas; sourceTree = "<group>"; };
+		0D281A462B07F2D50075AE41 /* PhysicsCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategories.swift; sourceTree = "<group>"; };
+		0D281A4B2B07FE530075AE41 /* ExplosionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionFactory.swift; sourceTree = "<group>"; };
+		0D281A4D2B0801D30075AE41 /* Explosion.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Explosion.atlas; sourceTree = "<group>"; };
+		0D281A4F2B092AFD0075AE41 /* Bullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bullet.swift; sourceTree = "<group>"; };
+		0D281A512B0932E20075AE41 /* Bullet.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Bullet.atlas; sourceTree = "<group>"; };
+		0D281A532B0932FB0075AE41 /* BulletFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletFactory.swift; sourceTree = "<group>"; };
+		0D281A552B0A4DD50075AE41 /* MuzzleFlash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuzzleFlash.swift; sourceTree = "<group>"; };
+		0D281A572B0A51510075AE41 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		0D281A5C2B0A6A340075AE41 /* BulletHitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletHitFactory.swift; sourceTree = "<group>"; };
+		0D281A5E2B0A6D3F0075AE41 /* Hit.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hit.atlas; sourceTree = "<group>"; };
+		0D281A642B0A87810075AE41 /* ContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDelegate.swift; sourceTree = "<group>"; };
+		0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyDelegate.swift; sourceTree = "<group>"; };
+		0D281A6B2B0D357E0075AE41 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		0D281A6D2B0D38A20075AE41 /* AsteroidFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidFactory.swift; sourceTree = "<group>"; };
+		0D281A712B0E03760075AE41 /* Damageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damageable.swift; sourceTree = "<group>"; };
+		0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDelegate.swift; sourceTree = "<group>"; };
+		0D281A752B0E7E030075AE41 /* AsteroidSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidSmall.swift; sourceTree = "<group>"; };
+		0D281A772B1151C20075AE41 /* bulletHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bulletHit.wav; sourceTree = "<group>"; };
+		0D281A7A2B1151D70075AE41 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		0D281A7C2B11521C0075AE41 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		0D281A7E2B1383770075AE41 /* SoundEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffects.swift; sourceTree = "<group>"; };
+		0D281A802B13BF650075AE41 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		0D281A822B13C9CB0075AE41 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,16 +128,155 @@
 		0D281A0A2B02CA1E0075AE41 /* Galactic Pixels Retro Blaster */ = {
 			isa = PBXGroup;
 			children = (
+				0D281A822B13C9CB0075AE41 /* LICENSE.txt */,
+				0D281A302B03F6CC0075AE41 /* Galactic-Pixels-Retro-Blaster-Info.plist */,
 				0D281A0B2B02CA1E0075AE41 /* AppDelegate.swift */,
-				0D281A0D2B02CA1E0075AE41 /* GameScene.sks */,
-				0D281A0F2B02CA1E0075AE41 /* Actions.sks */,
-				0D281A112B02CA1E0075AE41 /* GameScene.swift */,
-				0D281A132B02CA1E0075AE41 /* GameViewController.swift */,
-				0D281A152B02CA1E0075AE41 /* Main.storyboard */,
-				0D281A182B02CA1F0075AE41 /* Assets.xcassets */,
-				0D281A1A2B02CA1F0075AE41 /* LaunchScreen.storyboard */,
+				0D281A802B13BF650075AE41 /* Settings.swift */,
+				0D281A632B0A86C90075AE41 /* View Controllers */,
+				0D281A592B0A51550075AE41 /* Protocols */,
+				0D281A422B06B0CB0075AE41 /* Factories */,
+				0D281A662B0A91350075AE41 /* Physics */,
+				0D281A312B03FA820075AE41 /* Nodes */,
+				0D281A292B02CB110075AE41 /* Game States */,
+				0D281A282B02CB0A0075AE41 /* Scenes */,
+				0D281A2A2B02CB250075AE41 /* Storyboard */,
+				0D281A622B0A86BC0075AE41 /* Utils */,
+				0D281A222B02CA5C0075AE41 /* Assets */,
 			);
 			path = "Galactic Pixels Retro Blaster";
+			sourceTree = "<group>";
+		};
+		0D281A222B02CA5C0075AE41 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A512B0932E20075AE41 /* Bullet.atlas */,
+				0D281A4D2B0801D30075AE41 /* Explosion.atlas */,
+				0D281A442B07B89C0075AE41 /* Enemy.atlas */,
+				0D281A5E2B0A6D3F0075AE41 /* Hit.atlas */,
+				0D281A2F2B03F5F20075AE41 /* Fonts */,
+				0D281A232B02CA6D0075AE41 /* Scenes */,
+				0D281A792B1151C70075AE41 /* Sound FX */,
+				0D281A182B02CA1F0075AE41 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0D281A232B02CA6D0075AE41 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A0D2B02CA1E0075AE41 /* GameScene.sks */,
+				0D281A262B02CABA0075AE41 /* TitleScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0D281A282B02CB0A0075AE41 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A112B02CA1E0075AE41 /* GameScene.swift */,
+				0D281A2B2B02CB400075AE41 /* TitleScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0D281A292B02CB110075AE41 /* Game States */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A322B03FB070075AE41 /* PlayingState.swift */,
+				0D281A342B0407630075AE41 /* GameOverState.swift */,
+				0D281A362B0407A90075AE41 /* PausedState.swift */,
+			);
+			path = "Game States";
+			sourceTree = "<group>";
+		};
+		0D281A2A2B02CB250075AE41 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A152B02CA1E0075AE41 /* Main.storyboard */,
+				0D281A1A2B02CA1F0075AE41 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0D281A2F2B03F5F20075AE41 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A2D2B03F5EC0075AE41 /* 04B_03__.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0D281A312B03FA820075AE41 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A382B041D940075AE41 /* InfiniteScrollingBackground.swift */,
+				0D281A3A2B056C100075AE41 /* Player.swift */,
+				0D281A3E2B06AC5F0075AE41 /* Enemy.swift */,
+				0D281A4F2B092AFD0075AE41 /* Bullet.swift */,
+				0D281A552B0A4DD50075AE41 /* MuzzleFlash.swift */,
+				0D281A6B2B0D357E0075AE41 /* Asteroid.swift */,
+				0D281A752B0E7E030075AE41 /* AsteroidSmall.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		0D281A422B06B0CB0075AE41 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A6D2B0D38A20075AE41 /* AsteroidFactory.swift */,
+				0D281A402B06B0C40075AE41 /* EnemyFactory.swift */,
+				0D281A4B2B07FE530075AE41 /* ExplosionFactory.swift */,
+				0D281A532B0932FB0075AE41 /* BulletFactory.swift */,
+				0D281A5C2B0A6A340075AE41 /* BulletHitFactory.swift */,
+				0D281A7E2B1383770075AE41 /* SoundEffects.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		0D281A592B0A51550075AE41 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A572B0A51510075AE41 /* Updatable.swift */,
+				0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */,
+				0D281A712B0E03760075AE41 /* Damageable.swift */,
+				0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0D281A622B0A86BC0075AE41 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A3C2B05725D0075AE41 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0D281A632B0A86C90075AE41 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A132B02CA1E0075AE41 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0D281A662B0A91350075AE41 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A462B07F2D50075AE41 /* PhysicsCategories.swift */,
+				0D281A642B0A87810075AE41 /* ContactDelegate.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		0D281A792B1151C70075AE41 /* Sound FX */ = {
+			isa = PBXGroup;
+			children = (
+				0D281A7A2B1151D70075AE41 /* explosion.wav */,
+				0D281A772B1151C20075AE41 /* bulletHit.wav */,
+				0D281A7C2B11521C0075AE41 /* backgroundMusic.mp3 */,
+			);
+			path = "Sound FX";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,11 +337,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D281A782B1151C20075AE41 /* bulletHit.wav in Resources */,
 				0D281A172B02CA1E0075AE41 /* Main.storyboard in Resources */,
 				0D281A0E2B02CA1E0075AE41 /* GameScene.sks in Resources */,
+				0D281A2E2B03F5EC0075AE41 /* 04B_03__.TTF in Resources */,
+				0D281A4E2B0801D30075AE41 /* Explosion.atlas in Resources */,
+				0D281A522B0932E30075AE41 /* Bullet.atlas in Resources */,
+				0D281A832B13C9CC0075AE41 /* LICENSE.txt in Resources */,
+				0D281A7B2B1151D70075AE41 /* explosion.wav in Resources */,
+				0D281A452B07B89C0075AE41 /* Enemy.atlas in Resources */,
 				0D281A192B02CA1F0075AE41 /* Assets.xcassets in Resources */,
+				0D281A5F2B0A6D3F0075AE41 /* Hit.atlas in Resources */,
+				0D281A272B02CABA0075AE41 /* TitleScene.sks in Resources */,
 				0D281A1C2B02CA1F0075AE41 /* LaunchScreen.storyboard in Resources */,
-				0D281A102B02CA1E0075AE41 /* Actions.sks in Resources */,
+				0D281A7D2B11521C0075AE41 /* backgroundMusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +362,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D281A122B02CA1E0075AE41 /* GameScene.swift in Sources */,
+				0D281A562B0A4DD50075AE41 /* MuzzleFlash.swift in Sources */,
+				0D281A352B0407630075AE41 /* GameOverState.swift in Sources */,
+				0D281A6A2B0BE5FF0075AE41 /* EnemyDelegate.swift in Sources */,
+				0D281A762B0E7E030075AE41 /* AsteroidSmall.swift in Sources */,
+				0D281A502B092AFD0075AE41 /* Bullet.swift in Sources */,
+				0D281A6E2B0D38A20075AE41 /* AsteroidFactory.swift in Sources */,
 				0D281A142B02CA1E0075AE41 /* GameViewController.swift in Sources */,
+				0D281A5D2B0A6A340075AE41 /* BulletHitFactory.swift in Sources */,
+				0D281A3F2B06AC5F0075AE41 /* Enemy.swift in Sources */,
+				0D281A652B0A87810075AE41 /* ContactDelegate.swift in Sources */,
+				0D281A742B0E042A0075AE41 /* AsteroidDelegate.swift in Sources */,
 				0D281A0C2B02CA1E0075AE41 /* AppDelegate.swift in Sources */,
+				0D281A332B03FB070075AE41 /* PlayingState.swift in Sources */,
+				0D281A3D2B05725D0075AE41 /* Utils.swift in Sources */,
+				0D281A392B041D950075AE41 /* InfiniteScrollingBackground.swift in Sources */,
+				0D281A722B0E03760075AE41 /* Damageable.swift in Sources */,
+				0D281A7F2B1383770075AE41 /* SoundEffects.swift in Sources */,
+				0D281A812B13BF650075AE41 /* Settings.swift in Sources */,
+				0D281A4C2B07FE530075AE41 /* ExplosionFactory.swift in Sources */,
+				0D281A6C2B0D357E0075AE41 /* Asteroid.swift in Sources */,
+				0D281A2C2B02CB400075AE41 /* TitleScene.swift in Sources */,
+				0D281A582B0A51510075AE41 /* Updatable.swift in Sources */,
+				0D281A3B2B056C100075AE41 /* Player.swift in Sources */,
+				0D281A472B07F2D50075AE41 /* PhysicsCategories.swift in Sources */,
+				0D281A372B0407A90075AE41 /* PausedState.swift in Sources */,
+				0D281A542B0932FB0075AE41 /* BulletFactory.swift in Sources */,
+				0D281A412B06B0C40075AE41 /* EnemyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,16 +538,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = EA9V3552CR;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Galactic-Pixels-Retro-Blaster-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Retro Blaster";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.arcade-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,9 +559,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dimchez.Galactic-Pixels-Retro-Blaster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,16 +574,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = EA9V3552CR;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Galactic-Pixels-Retro-Blaster-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Retro Blaster";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.arcade-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,9 +595,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dimchez.Galactic-Pixels-Retro-Blaster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
