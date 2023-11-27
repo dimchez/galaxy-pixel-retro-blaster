@@ -42,8 +42,8 @@ class Enemy: SKSpriteNode, Updatable, Damageable {
         run(SKAction.repeatForever(animationAction))
     }
     
-    func takeDamage(in scene: SKScene) {
-        health -= 0.35
+    func takeDamage(multipliedBy damageMultiplier: CGFloat, in scene: SKScene) {
+        health -= 0.35 * damageMultiplier
         
         showHitEffect()
         

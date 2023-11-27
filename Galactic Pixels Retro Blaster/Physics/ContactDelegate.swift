@@ -91,7 +91,7 @@ class ContactDelegate {
         
         guard enemyNode.hasCollided == false else { return }
         
-        enemyNode.takeDamage(in: scene)
+        enemyNode.takeDamage(multipliedBy: bulletNode.damageMultiplier, in: scene)
         
         BulletHitFactory.shared.playBulletHit(at: position, in: scene)
         
@@ -112,7 +112,7 @@ class ContactDelegate {
     private func handleCollisionBetween(bullet: Bullet?, and asteroid: Asteroid?, at position: CGPoint) {
         guard let bulletNode = bullet, let asteroidNode = asteroid else { return }
         
-        asteroidNode.takeDamage(in: scene)
+        asteroidNode.takeDamage(multipliedBy: bulletNode.damageMultiplier, in: scene)
         
         BulletHitFactory.shared.playBulletHit(at: position, in: scene)
         
@@ -122,7 +122,7 @@ class ContactDelegate {
     private func handleCollisionBetween(bullet: Bullet?, and asteroid: AsteroidSmall?, at position: CGPoint) {
         guard let bulletNode = bullet, let asteroidNode = asteroid else { return }
         
-        asteroidNode.takeDamage(in: scene)
+        asteroidNode.takeDamage(multipliedBy: bulletNode.damageMultiplier, in: scene)
         
         BulletHitFactory.shared.playBulletHit(at: position, in: scene)
         

@@ -69,15 +69,15 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
     }
     
     func enemyDidGetDestroyed() {
-        score += 1
+        increaseScore(by: 1)
     }
     
     func asteroidDidGetDestroyed(ofSize size: AsteroidSize) {
         switch size {
         case .small:
-            score += 2
+            increaseScore(by: 2)
         case .large:
-            score += 5
+            increaseScore(by: 5)
         }
     }
     
@@ -136,5 +136,16 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
     private func updateScoreLabel() {
         let formattedScore = String(format: "%05d", score)
         scoreLabel?.text = "Score: \(formattedScore)"
+    }
+    
+    private func increaseScore(by delta: Int) {
+        let newScore = score + delta
+        
+        // TODO: increase amount required to level up
+        if score < 10 && newScore >= 10 {
+            player?.levelUp()
+        }
+        
+        score = newScore
     }
 }

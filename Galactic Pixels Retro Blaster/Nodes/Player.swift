@@ -7,29 +7,31 @@
 
 import SpriteKit
 
+enum Orientation {
+    case upwards
+    case neutral
+    case downwards
+}
+
 class Player: SKSpriteNode {
     
     static let name = "player"
     
-    enum Orientation {
-        case upwards
-        case neutral
-        case downwards
-    }
-    
-    var orientation: Orientation = .neutral {
+    private var orientation: Orientation = .neutral {
         didSet {
             texture = textureForOrientation(orientation)
         }
     }
     
-    var lastTouchPosition: CGPoint?
+    private var lastTouchPosition: CGPoint?
     
-    var lastUpdateTime: TimeInterval?
+    private var lastUpdateTime: TimeInterval?
     
-    var muzzleFlash: MuzzleFlash?
+    private var muzzleFlash: MuzzleFlash?
     
-    var isShooting = false
+    private var isShooting = false
+    
+    private var level = 1
     
     private let verticalSpeedThreshold: CGFloat = 1000.0 // Vertical speed threshold in points per second
     
@@ -38,6 +40,20 @@ class Player: SKSpriteNode {
     private let upwardsTexture = SKTexture(imageNamed: "player3")
     
     private let downwardsTexture = SKTexture(imageNamed: "player2")
+    
+    private static let levelUpAtlas = SKTextureAtlas(named: "LevelUp")
+    
+    private static let levelUpTextureFrames: [SKTexture] = {
+        var frames: [SKTexture] = []
+        let textureNames = levelUpAtlas.textureNames.sorted()
+        
+        for textureName in textureNames {
+            let texture = levelUpAtlas.textureNamed(textureName)
+            frames.append(texture)
+        }
+        
+        return frames
+    }()
     
     init() {
         super.init(texture: neutralTexture, color: .clear, size: neutralTexture.size())
@@ -130,6 +146,11 @@ class Player: SKSpriteNode {
         removeAction(forKey: "shooting")
     }
     
+    func levelUp() {
+        level += 1
+        showLevelUpEffect()
+    }
+    
     private func setupPhysicsBody() {
         guard let texture = self.texture else { return }
         
@@ -188,7 +209,8 @@ class Player: SKSpriteNode {
     }
     
     private func fireBullet() {
-        let bullet = BulletFactory.shared.spawnBullet()
+        let bullet = BulletFactory.shared.spawnBullet(level: level)
+        
         let direction = CGVector(dx: 1000, dy: 0)
         let offset = CGPoint(x: size.width / 2 + bullet.size.width / 2, y: 0)
         let from = position + offset
@@ -197,5 +219,25 @@ class Player: SKSpriteNode {
         
         muzzleFlash?.flash()
         parent?.addChild(bullet)
+    }
+    
+    func showLevelUpEffect() {
+        guard let firstFrame = Player.levelUpTextureFrames.first else { return }
+        
+        let levelUp = SKSpriteNode(texture: firstFrame, size: firstFrame.size())
+        levelUp.position = CGPoint.zero
+        levelUp.zPosition = 10
+        addChild(levelUp)
+        
+        let fadeIn = SKAction.fadeAlpha(to: 1, duration: 0)
+        let animate = SKAction.repeatForever(SKAction.animate(with: Player.levelUpTextureFrames, timePerFrame: 0.05, resize: true, restore: true))
+        let scaleUp = SKAction.scale(by: 10, duration: 0.1)
+        let fadeOut = SKAction.fadeOut(withDuration: 1.0)
+        let animateRepeat = SKAction.repeatForever(SKAction.group([fadeIn, animate, scaleUp, fadeOut]))
+        
+        let wait = SKAction.wait(forDuration: 5.0)
+        let removeNode = SKAction.removeFromParent()
+
+        levelUp.run(SKAction.sequence([animateRepeat, wait, removeNode]))
     }
 }

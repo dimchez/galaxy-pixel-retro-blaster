@@ -8,7 +8,7 @@
 import SpriteKit
 
 protocol Damageable: AnyObject {
-    func takeDamage(in scene: SKScene)
+    func takeDamage(multipliedBy multiplier: CGFloat, in scene: SKScene)
 }
 
 extension Damageable where Self: SKSpriteNode {

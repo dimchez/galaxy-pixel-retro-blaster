@@ -53,8 +53,8 @@ class Asteroid: SKSpriteNode, Updatable, Damageable {
         }
     }
     
-    func takeDamage(in scene: SKScene) {
-        health -= 0.105
+    func takeDamage(multipliedBy multiplier: CGFloat, in scene: SKScene) {
+        health -= 0.105 * multiplier
         
         showHitEffect()
         

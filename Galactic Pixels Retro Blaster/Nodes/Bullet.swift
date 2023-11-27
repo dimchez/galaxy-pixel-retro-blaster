@@ -11,6 +11,8 @@ class Bullet: SKSpriteNode, Updatable {
     
     static let name = "bullet"
     
+    var damageMultiplier: CGFloat = 1.0
+    
     private let bulletSpeed: CGFloat = 1000.0
     
     init() {
