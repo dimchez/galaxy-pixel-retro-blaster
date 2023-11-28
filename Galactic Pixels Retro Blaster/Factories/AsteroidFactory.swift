@@ -7,6 +7,15 @@
 
 import SpriteKit
 
+enum AsteroidDirection: Int {
+    case upward = 1
+    case downward = -1
+    
+    mutating func toggle() {
+        self = self == .downward ? .upward : .downward
+    }
+}
+
 class AsteroidFactory {
     
     static let shared = AsteroidFactory()

@@ -36,11 +36,9 @@
 		0D281A5D2B0A6A340075AE41 /* BulletHitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A5C2B0A6A340075AE41 /* BulletHitFactory.swift */; };
 		0D281A5F2B0A6D3F0075AE41 /* Hit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A5E2B0A6D3F0075AE41 /* Hit.atlas */; };
 		0D281A652B0A87810075AE41 /* ContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A642B0A87810075AE41 /* ContactDelegate.swift */; };
-		0D281A6A2B0BE5FF0075AE41 /* EnemyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */; };
 		0D281A6C2B0D357E0075AE41 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A6B2B0D357E0075AE41 /* Asteroid.swift */; };
 		0D281A6E2B0D38A20075AE41 /* AsteroidFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A6D2B0D38A20075AE41 /* AsteroidFactory.swift */; };
 		0D281A722B0E03760075AE41 /* Damageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A712B0E03760075AE41 /* Damageable.swift */; };
-		0D281A742B0E042A0075AE41 /* AsteroidDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */; };
 		0D281A762B0E7E030075AE41 /* AsteroidSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A752B0E7E030075AE41 /* AsteroidSmall.swift */; };
 		0D281A782B1151C20075AE41 /* bulletHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A772B1151C20075AE41 /* bulletHit.wav */; };
 		0D281A7B2B1151D70075AE41 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A7A2B1151D70075AE41 /* explosion.wav */; };
@@ -50,6 +48,7 @@
 		0D281A852B150C160075AE41 /* Spark.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A842B150C160075AE41 /* Spark.atlas */; };
 		0D281A872B150C650075AE41 /* Explosion.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A862B150C650075AE41 /* Explosion.atlas */; };
 		0D281A8B2B152EE30075AE41 /* LevelUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 0D281A8A2B152EE30075AE41 /* LevelUp.atlas */; };
+		0D281A8D2B1665C80075AE41 /* GameNodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D281A8C2B1665C80075AE41 /* GameNodeDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,11 +83,9 @@
 		0D281A5C2B0A6A340075AE41 /* BulletHitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletHitFactory.swift; sourceTree = "<group>"; };
 		0D281A5E2B0A6D3F0075AE41 /* Hit.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Hit.atlas; sourceTree = "<group>"; };
 		0D281A642B0A87810075AE41 /* ContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDelegate.swift; sourceTree = "<group>"; };
-		0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyDelegate.swift; sourceTree = "<group>"; };
 		0D281A6B2B0D357E0075AE41 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		0D281A6D2B0D38A20075AE41 /* AsteroidFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidFactory.swift; sourceTree = "<group>"; };
 		0D281A712B0E03760075AE41 /* Damageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damageable.swift; sourceTree = "<group>"; };
-		0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDelegate.swift; sourceTree = "<group>"; };
 		0D281A752B0E7E030075AE41 /* AsteroidSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidSmall.swift; sourceTree = "<group>"; };
 		0D281A772B1151C20075AE41 /* bulletHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bulletHit.wav; sourceTree = "<group>"; };
 		0D281A7A2B1151D70075AE41 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		0D281A842B150C160075AE41 /* Spark.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Spark.atlas; sourceTree = "<group>"; };
 		0D281A862B150C650075AE41 /* Explosion.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Explosion.atlas; sourceTree = "<group>"; };
 		0D281A8A2B152EE30075AE41 /* LevelUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = LevelUp.atlas; sourceTree = "<group>"; };
+		0D281A8C2B1665C80075AE41 /* GameNodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNodeDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,9 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				0D281A572B0A51510075AE41 /* Updatable.swift */,
-				0D281A692B0BE5FF0075AE41 /* EnemyDelegate.swift */,
 				0D281A712B0E03760075AE41 /* Damageable.swift */,
-				0D281A732B0E042A0075AE41 /* AsteroidDelegate.swift */,
+				0D281A8C2B1665C80075AE41 /* GameNodeDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -368,7 +365,6 @@
 				0D281A122B02CA1E0075AE41 /* GameScene.swift in Sources */,
 				0D281A562B0A4DD50075AE41 /* MuzzleFlash.swift in Sources */,
 				0D281A352B0407630075AE41 /* GameOverState.swift in Sources */,
-				0D281A6A2B0BE5FF0075AE41 /* EnemyDelegate.swift in Sources */,
 				0D281A762B0E7E030075AE41 /* AsteroidSmall.swift in Sources */,
 				0D281A502B092AFD0075AE41 /* Bullet.swift in Sources */,
 				0D281A6E2B0D38A20075AE41 /* AsteroidFactory.swift in Sources */,
@@ -376,7 +372,6 @@
 				0D281A5D2B0A6A340075AE41 /* BulletHitFactory.swift in Sources */,
 				0D281A3F2B06AC5F0075AE41 /* Enemy.swift in Sources */,
 				0D281A652B0A87810075AE41 /* ContactDelegate.swift in Sources */,
-				0D281A742B0E042A0075AE41 /* AsteroidDelegate.swift in Sources */,
 				0D281A0C2B02CA1E0075AE41 /* AppDelegate.swift in Sources */,
 				0D281A332B03FB070075AE41 /* PlayingState.swift in Sources */,
 				0D281A3D2B05725D0075AE41 /* Utils.swift in Sources */,
@@ -389,6 +384,7 @@
 				0D281A2C2B02CB400075AE41 /* TitleScene.swift in Sources */,
 				0D281A582B0A51510075AE41 /* Updatable.swift in Sources */,
 				0D281A3B2B056C100075AE41 /* Player.swift in Sources */,
+				0D281A8D2B1665C80075AE41 /* GameNodeDelegate.swift in Sources */,
 				0D281A472B07F2D50075AE41 /* PhysicsCategories.swift in Sources */,
 				0D281A372B0407A90075AE41 /* PausedState.swift in Sources */,
 				0D281A542B0932FB0075AE41 /* BulletFactory.swift in Sources */,

@@ -8,8 +8,10 @@
 import SpriteKit
 import GameplayKit
 
-class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
+class PlayingState: GKState, GameNodeDelegate {
     unowned let gameScene: GameScene
+    
+    var camera: SKCameraNode?
     
     var player: Player?
     
@@ -34,6 +36,7 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
     override func didEnter(from previousState: GKState?) {
         if previousState == nil {
             setupPlayer()
+            setupCamera()
         }
         
         initSpawnEnemies()
@@ -70,17 +73,21 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
         player?.touchesEnded()
     }
     
-    func enemyDidGetDestroyed() {
-        increaseScore(by: 1)
+    func didGetDestroyed(nodeOfType gameNode: GameNode) {
+        switch gameNode {
+        case .asteroid:
+            increaseScore(by: 5)
+        case .asteroidSmall:
+            increaseScore(by: 2)
+        case .enemy:
+            increaseScore(by: 1)
+        case .player:
+            shakeCamera(forDuration: 0.5)
+        }
     }
     
-    func asteroidDidGetDestroyed(ofSize size: AsteroidSize) {
-        switch size {
-        case .small:
-            increaseScore(by: 2)
-        case .large:
-            increaseScore(by: 5)
-        }
+    func enemyDidGetDestroyed() {
+        increaseScore(by: 1)
     }
     
     private func setupPlayer() {
@@ -92,6 +99,16 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
         playerCharacter.makeInvulnurable()
         
         player = playerCharacter
+        player?.delegate = self
+    }
+    
+    private func setupCamera() {
+        let camera = SKCameraNode()
+        gameScene.addChild(camera)
+        gameScene.camera = camera
+        camera.position = CGPoint(x: gameScene.frame.midX, y: gameScene.frame.midY)
+        
+        self.camera = camera
     }
     
     private func initSpawnEnemies() {
@@ -149,5 +166,29 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
         }
         
         score = newScore
+    }
+    
+    private func shakeCamera(forDuration duration: TimeInterval) {
+        let amplitudeX: Float = 16
+        let offsetX = amplitudeX / 2
+        
+        let amplitudeY: Float = 12
+        let offsetY = amplitudeY / 2
+        
+        var actions: [SKAction] = []
+        
+        let numberOfShakes = Int(duration / 0.04)
+        
+        for _ in 1...numberOfShakes {
+            let moveX = Float(arc4random_uniform(UInt32(amplitudeX))) - offsetX
+            let moveY = Float(arc4random_uniform(UInt32(amplitudeY))) - offsetY
+            let shakeAction = SKAction.moveBy(x: CGFloat(moveX), y: CGFloat(moveY), duration: 0.02)
+            shakeAction.timingMode = .easeOut
+            actions.append(shakeAction)
+            actions.append(shakeAction.reversed())
+        }
+        
+        let actionsSequence = SKAction.sequence(actions)
+        camera?.run(actionsSequence)
     }
 }

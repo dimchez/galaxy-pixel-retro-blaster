@@ -17,6 +17,8 @@ class Player: SKSpriteNode {
     
     static let name = "player"
     
+    weak var delegate: GameNodeDelegate?
+    
     private var orientation: Orientation = .neutral {
         didSet {
             texture = textureForOrientation(orientation)
@@ -92,10 +94,12 @@ class Player: SKSpriteNode {
     }
     
     func explode(in scene: SKScene) {
+        stopShooting()
+        
         ExplosionFactory.shared.playExplosion(at: position, in: scene)
         SoundEffects.shared.play(.explosion, in: scene)
         
-        stopShooting()
+        delegate?.didGetDestroyed(nodeOfType: .player)
     }
     
     func resetPosition(in scene: SKScene) {
@@ -237,7 +241,7 @@ class Player: SKSpriteNode {
         
         let wait = SKAction.wait(forDuration: 5.0)
         let removeNode = SKAction.removeFromParent()
-
+        
         levelUp.run(SKAction.sequence([animateRepeat, wait, removeNode]))
     }
 }

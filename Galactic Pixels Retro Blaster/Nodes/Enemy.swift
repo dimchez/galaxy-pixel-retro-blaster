@@ -11,7 +11,7 @@ class Enemy: SKSpriteNode, Updatable, Damageable {
     
     static let name = "enemy"
     
-    weak var delegate: EnemyDelegate?
+    weak var delegate: GameNodeDelegate?
     
     var hasCollided = false
     
@@ -48,7 +48,7 @@ class Enemy: SKSpriteNode, Updatable, Damageable {
         showHitEffect()
         
         if health <= 0 {
-            delegate?.enemyDidGetDestroyed()
+            delegate?.didGetDestroyed(nodeOfType: .enemy)
             explode(in: scene)
         }
     }

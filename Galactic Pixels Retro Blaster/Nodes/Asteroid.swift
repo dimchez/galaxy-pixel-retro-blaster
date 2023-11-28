@@ -11,7 +11,7 @@ class Asteroid: SKSpriteNode, Updatable, Damageable {
     
     static let name = "asteroid"
     
-    weak var delegate: AsteroidDelegate?
+    weak var delegate: GameNodeDelegate?
     
     private var health = 1.0
     
@@ -59,7 +59,7 @@ class Asteroid: SKSpriteNode, Updatable, Damageable {
         showHitEffect()
         
         if health <= 0 {
-            delegate?.asteroidDidGetDestroyed(ofSize: .large)
+            delegate?.didGetDestroyed(nodeOfType: .asteroid)
             spawnSmallerAsteroids()
             explode(in: scene)
         }
