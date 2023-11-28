@@ -17,6 +17,8 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
     
     var lastUpdateTime: TimeInterval = 0
     
+    var levelUpScore = 100
+    
     var scoreLabel: SKLabelNode?
     
     var score = 0 {
@@ -141,9 +143,9 @@ class PlayingState: GKState, EnemyDelegate, AsteroidDelegate {
     private func increaseScore(by delta: Int) {
         let newScore = score + delta
         
-        // TODO: increase amount required to level up
-        if score < 10 && newScore >= 10 {
+        if score < levelUpScore && newScore >= levelUpScore {
             player?.levelUp()
+            levelUpScore *= 2
         }
         
         score = newScore
