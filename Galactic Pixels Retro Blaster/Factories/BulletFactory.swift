@@ -20,6 +20,7 @@ class BulletFactory {
         
         for textureName in textureNames {
             let texture = BulletFactory.bulletAtlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         
@@ -32,6 +33,7 @@ class BulletFactory {
         
         for textureName in textureNames {
             let texture = BulletFactory.sparkAtlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         
@@ -39,10 +41,9 @@ class BulletFactory {
     }()
     
     func spawnBullet(level: Int) -> Bullet {
-        switch level {
-        case 2:
+        if level > 2 {
             return spawnSpark()
-        default:
+        } else {
             return spawnBullet()
         }
     }

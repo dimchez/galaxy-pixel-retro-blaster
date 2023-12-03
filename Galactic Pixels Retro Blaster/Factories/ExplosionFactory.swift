@@ -18,6 +18,7 @@ class ExplosionFactory {
         
         for textureName in textureNames {
             let texture = ExplosionFactory.atlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         

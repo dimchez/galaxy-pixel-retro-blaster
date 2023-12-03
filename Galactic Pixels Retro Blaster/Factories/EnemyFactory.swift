@@ -18,6 +18,7 @@ class EnemyFactory {
         
         for textureName in textureNames {
             let texture = EnemyFactory.atlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         

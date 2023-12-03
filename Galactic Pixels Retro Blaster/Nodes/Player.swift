@@ -51,6 +51,7 @@ class Player: SKSpriteNode {
         
         for textureName in textureNames {
             let texture = levelUpAtlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         

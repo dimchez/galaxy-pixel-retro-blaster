@@ -18,6 +18,7 @@ class BulletHitFactory {
         
         for textureName in textureNames {
             let texture = BulletHitFactory.atlas.textureNamed(textureName)
+            texture.filteringMode = .nearest
             frames.append(texture)
         }
         
